@@ -1,0 +1,267 @@
+body{
+    background-color:  #ba15fc;
+    height: 100vh;
+   
+    color: #faf8f8;
+    width: 100%;
+    margin: auto;
+}
+.container{
+    display: flex;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+h2{
+    width: 30%;
+}
+
+
+
+.myCard {
+    background-color: transparent;
+    width: 20%;
+    display: flex;
+    height: 90vh;
+    perspective: 1000px;
+    
+
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .innerCard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    
+  }
+ 
+  
+  .myCard:hover .innerCard {
+    transform: rotateY(180deg);
+  
+  }
+  
+  .frontSide,
+  .backSide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    color: white;
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.5);
+    font-weight: 700;
+  }
+  
+  .frontSide,
+  .frontSide::before {
+    background:  rgb(11, 238, 113) ;
+    
+  }
+    
+  
+  .backSide,
+  .backSide::before {
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  
+}
+label{
+    font-size: 20px;
+    padding: 5px;
+}
+input, select{
+ width: 80%;
+ height: 40px;
+ line-height: 28px;
+ border: 2px solid transparent;
+ border-radius: 8px;
+ outline: none;
+ background-color: #f3f3f4;
+ color: #0d0c22;
+ transition: .3s ease;
+}
+  button{
+    width: 80%;
+    height: 50px;
+    color: azure;
+    background-color: #ba15fc ;
+    border: 2px solid #faf8f8;
+    border-radius: 10px;
+    margin-top: 100px;
+
+  }
+  button:hover {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-size: 15px;
+  }
+  
+  .backSide {
+    transform: rotateY(180deg);
+  }
+  
+  .frontSide::before,
+  .backSide::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 1em;
+    filter: blur(20px);
+    animation: animate 5s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      opacity: 0.3;
+    }
+  
+    80% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0.3;
+    }
+  }
+
+ 
+  .movie-container{
+    width: 50%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    
+    
+  }
+  
+
+  .movie-container select {
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  
+  
+  
+  .seat {
+    background-color: #444451;
+    height: 26px;
+    width: 32px;
+    margin: 3px;
+    font-size: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .seat.selected {
+    background-color: green;
+  }
+  
+  .seat.sold {
+    background-color: #fff;
+  }
+  
+  .seat:nth-of-type(2) {
+    margin-right: 18px;
+  }
+  
+  .seat:nth-last-of-type(2) {
+    margin-left: 18px;
+  }
+  
+  .seat:not(.sold):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+  
+  .showcase .seat:not(.sold):hover {
+    cursor: default;
+    transform: scale(1);
+  }
+  
+  .showcase {
+    background: rgba(14, 13, 13, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #0c0c0c;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  .showcase li small {
+    margin-left: 2px;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .screen {
+    background-color: #fff;
+    height: 120px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-48deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  }
+  
+  p.text{
+      margin: 5px 0;
+      font-size: larger;
+      letter-spacing: 1px;
+      
+      
+  }
+  .foot{
+    background-color: rgb(11, 238, 113);
+    color: #0c0c0c;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    
+    
+  }
+  .foot,p,span{
+      color: rgb(252, 253, 252);
+      padding: 5px;
+      font-size: 20px;
+      
+  }
